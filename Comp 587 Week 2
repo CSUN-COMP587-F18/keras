@@ -1,0 +1,5 @@
+Second pull request:
+- Have looked into the examples directory to get higher understanding of the typical system usage
+- Have looked more deeply into keras, specifically the layers directory (neural networks)
+- Learned how the training is down in keras (it is done in the engine)
+- Still learning the system in detail before beginning unit testing!
