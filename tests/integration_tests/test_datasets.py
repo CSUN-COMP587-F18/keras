@@ -17,20 +17,20 @@ def test_cifar():
     random.seed(time.time())
     if random.random() > 0.8:
         (x_train, y_train), (x_test, y_test) = cifar10.load_data()
-	cifarDefaultTrainLength = 50000
-	cifarDefaultTestLength = 10000
+		cifarDefaultTrainLength = 50000
+		cifarDefaultTestLength = 10000
         assert len(x_train) == len(y_train) == cifarDefaultLength
         assert len(x_test) == len(y_test) == cifarDefaultTestLength
 
         (x_train, y_train), (x_test, y_test) = cifar100.load_data('fine')
-	cifarFineTrainLength = 50000
-	cifarFineTestLength = 10000
+		cifarFineTrainLength = 50000
+		cifarFineTestLength = 10000
         assert len(x_train) == len(y_train) == cifarFineTrainLength
         assert len(x_test) == len(y_test) == cifarFineTestLength
 
         (x_train, y_train), (x_test, y_test) = cifar100.load_data('coarse')
-	cifarCoarseTrainLength = 50000
-	cifarCoarseTestLength = 10000
+		cifarCoarseTrainLength = 50000
+		cifarCoarseTestLength = 10000
         assert len(x_train) == len(y_train) == cifarCoarseTrainLength
         assert len(x_test) == len(y_test) == cifarCoarseTestLength
 
