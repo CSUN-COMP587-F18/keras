@@ -14,13 +14,13 @@ def arrayToImg(x, dataFormat=None, scale=True, dtype=None):
   if 'dtype' in inspect.getargspec(image.arrayToImg).args:
     if dtype is None:
       dtype = backend.floatx()
-    return image.arrayToImg(x,
+    return image.array_to_img(x,
+                              dataFormat=dataFormat,
+                              scale=scale,
+                              dtype=dtype)
+  return image.array_to_img(x,
                             dataFormat=dataFormat,
-                            scale=scale,
-                            dtype=dtype)
-  return image.arrayToImg(x,
-                          dataFormat=dataFormat,
-                          scale=scale)
+                            scale=scale)
 
 
 def imgToArray(img, dataFormat=None, dtype=None):
@@ -29,5 +29,5 @@ def imgToArray(img, dataFormat=None, dtype=None):
   if 'dtype' in inspect.getargspec(image.imgToArray).args:
     if dtype is None:
       dtype = backend.floatx()
-    return image.imgToArray(img, dataFormat=dataFormat, dtype=dtype)
-  return image.imgToArray(img, dataFormat=dataFormat)
+    return image.img_to_array(img, dataFormat=dataFormat, dtype=dtype)
+  return image.img_to_array(img, dataFormat=dataFormat)
