@@ -1,5 +1,6 @@
-import pytest
 from __future__ import print_function
+
+import pytest
 
 from keras.preprocessing import sequence
 from keras.models import Sequential
