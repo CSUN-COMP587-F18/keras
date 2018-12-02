@@ -1,14 +1,14 @@
 import pytest
 import numpy as np
-from numpy.testing import assert_allclose
 
 from keras.utils.test_utils import layer_test
+from keras import layers
+
 
 def test_flatten():
 
     def test_4d():
-        np_inp_channels_last = np.arange(24, dtype='float32').reshape(
-                                        (1, 4, 3, 2))
+        np_inp_channels_last = np.arange(24, dtype='float32').reshape((1, 4, 3, 2))
 
         np_output_cl = layer_test(layers.Flatten,
                                   kwargs={'data_format':
@@ -59,9 +59,11 @@ def test_flatten():
                                           'channels_first'},
                                   input_data=np_inp_channels_first,
                                   expected_output=np_output_cl)
+
     test_3d()
     test_4d()
     test_5d()
+
 
 if __name__ == '__main__':
     pytest.main([__file__])
